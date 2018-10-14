@@ -27,9 +27,14 @@ int factorial(int n, int result = 1);
 
 int fiboncci(int n);
 
+
 //rotate a matrix (2d array) in-place
 void rotate(vector<vector<int>>& matrix);
 
+
+//permutations with helper function
+void permute(vector<int> &num);
+void permuteRecursive(vector<int> &num, int begin, vector<vector<int>> &result);
 
 
 

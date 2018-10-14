@@ -8,6 +8,7 @@
 
 #include "questions.hpp"
 
+#include <cstdlib>
 #include <iostream>
 #include <map>
 #include <queue>
@@ -52,6 +53,42 @@ int fiboncci(int n) {
     dp[i] = dp[i-1] + dp[i-2];
   return dp[n];
 }
+
+
+//generate permutations with helper function
+void permute(vector<int> &num) {
+  vector<vector<int>> result;
+  
+  permuteRecursive(num, 0, result);
+  
+  //print 2d array
+  for (auto row: result) {
+    for (auto col: row)
+      cout << col << " ";
+    cout << endl;
+  }
+}
+
+void permuteRecursive(vector<int> &num, int begin, vector<vector<int>> &result) {
+  
+  // permute num[begin..end]
+  // invariant: num[0..begin-1] have been fixed/permuted
+  if (begin >= num.size()) {
+    // one permutation instance
+    result.push_back(num);
+    return;
+  }
+  
+  for (int i = begin; i < num.size(); i++) {
+    swap(num[begin], num[i]);
+    permuteRecursive(num, begin + 1, result);
+    // reset
+    swap(num[begin], num[i]);
+  }
+}
+//end permutations
+
+
 
 
 

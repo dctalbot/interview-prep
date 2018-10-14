@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <vector>
+#include <cstdlib>
 #include "questions.hpp"
 
 int main(int argc, const char * argv[]) {
@@ -17,10 +18,14 @@ int main(int argc, const char * argv[]) {
   */
   
   
-//  vector<int>  test = {1,2,3};
+  vector<int> test = {1,1, 2,3};
+  permute(test);
+  
 //  get_combinations(test);
   
 //  cout << factorial(7);
+  
+  
   
   return 0;
 }
