@@ -18,12 +18,14 @@ int main(int argc, const char * argv[]) {
   */
   
   
-  vector<int> test = {1,1, 2,3};
-  permute(test);
+//  vector<int> test = {1,1, 2,3};
+//  permute(test);
   
 //  get_combinations(test);
   
 //  cout << factorial(7);
+  
+  
   
   
   

@@ -37,5 +37,4 @@ void permute(vector<int> &num);
 void permuteRecursive(vector<int> &num, int begin, vector<vector<int>> &result);
 
 
-
 #endif /* questions_hpp */
